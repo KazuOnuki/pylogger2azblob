@@ -5,13 +5,16 @@ This repository provides a Python logging handler, BlobStorageTimedRotatingFileH
 ## Files/Directory Structure
   ```txt
   .
+  ├── .github
+  │   └── workflows
+  │       └── pytest_workflow.yaml (pytest_workflow of GithubAction.) 
   ├── pylogger2azblob
-  │   └── handlers.py          (Main Python module with the Azure Blob Storage logging) implementation.
+  │   └── handlers.py              (Main Python module with the Azure Blob Storage loggingimplementation.)
   ├── tests
-  │   └── test_handlers.py     (Unit tests for the Azure Blob Storage logging module.)
-  ├── .env                     (Configuration file for environment variables.)
-  ├── requirements.txt         (File specifying the Python packages required for this project.)
-  └── tutorial.py              (Tutorial script demonstrating how to use the logging functionality.)
+  │   └── test_handlers.py         (Unit tests for the Azure Blob Storage logging module.)
+  ├── .env                         (Configuration file for environment variables.)
+  ├── requirements.txt             (File specifying the Python packages required for this project.)
+  └── tutorial.py                  (Tutorial script demonstrating how to use the logging functionality.)
   ```
 
 ## Installation/Configuration
