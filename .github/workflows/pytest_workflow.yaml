@@ -31,6 +31,12 @@ jobs:
       run: |
         pip install --upgrade pip
         pip install -r requirements.txt
+    
+    # ref of az login action: <https://learn.microsoft.com/en-us/azure/developer/github/connect-from-azure?tabs=azure-portal%2Clinux#use-the-azure-login-action-with-a-service-principal-secret>
+    - name: Log in with Azure
+      uses: azure/login@v1
+      with:
+        creds: '${{secrets.AZURE_CREDENTIALS_OF_MY_SUBSCRIPTION}}'
 
     - name: Run Tests
       run: |
