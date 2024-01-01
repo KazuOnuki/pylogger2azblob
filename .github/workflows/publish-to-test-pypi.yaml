@@ -34,8 +34,8 @@ jobs:
     runs-on: ubuntu-latest
 
     environment:
-      name: testpypi
-      url: https://test.pypi.org/p/pylogger2azblob-v2
+      name: testpypiv2
+      url: https://test.pypi.org/p/pylogger2azblob
 
     permissions:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
