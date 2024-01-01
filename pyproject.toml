@@ -3,7 +3,7 @@ name = "pylogger2azblob"
 version = "0.0.1"
 authors = [{name="Kazuya Onuki"}]
 description = "a Python logging handler, BlobStorageTimedRotatingFileHandler, that extends the functionality of the built-in TimedRotatingFileHandler."
-readme = "README.md"
+readme = "README_pypi.md"
 requires-python = ">=3.12.0"
 license = {file = "LICENSE"}
 classifiers = [
@@ -11,15 +11,14 @@ classifiers = [
     "Operating System :: OS Independent",
     "Programming Language :: Python :: 3.12"
 ]
-keywords = ["azure", "blob", "logging"]
+keywords = ["azure blob", "logging"]
 dependencies = [
-    "azure-storage-blob==12.19.0",
-    "azure-identity==1.15.0",
-    "python-dotenv==1.0.0"
+    "azure-storage-blob",
+    "azure-identity"
 ]
 [project.optional-dependencies]  # only when development
 dev = [
-    "pytest==7.4.3",
+    "pytest",
     "build",
     "twine",
 ]

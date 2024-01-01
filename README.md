@@ -1,30 +1,17 @@
 ﻿# PYLOGGER2AZBLOB
 [![pytest](https://github.com/KazuOnuki/pylogger2azblob/actions/workflows/pytest_workflow.yaml/badge.svg)](https://github.com/KazuOnuki/pylogger2azblob/actions/workflows/pytest_workflow.yaml)
 [![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
+
 ## Overview
 This repository provides a Python logging handler, BlobStorageTimedRotatingFileHandler, that extends the functionality of the built-in TimedRotatingFileHandler. This handler automatically rotates log files at specified intervals and uploads the outdated log files to an Azure Storage Blob container. This ensures that your log history is retained in Azure Blob Storage while keeping only the latest log on the local file system.
-
-## Files/Directory Structure
-  ```txt
-  .
-  ├── .github
-  │   └── workflows
-  │       └── publish-to-test-pypi.yaml (publish testpypi.org of GithubAction.) 
-  │       └── pytest_workflow.yaml (pytest_workflow of GithubAction.) 
-  ├── pylogger2azblob
-  │   └── handlers.py              (Main Python module with the Azure Blob Storage loggingimplementation.)
-  ├── tests
-  │   └── test_handlers.py         (Unit tests for the Azure Blob Storage logging module.)
-  ├── .env                         (Configuration file for environment variables.)
-  ├── requirements.txt             (File specifying the Python packages required for this project.)
-  └── tutorial.py                  (Tutorial script demonstrating how to use the logging functionality.)
-  ```
 
 ## Installation/Configuration
 
 1. Install the required packages using the command:
     ```bash
-    pip install -r requirements.txt
+    pip install azure-storage-blob==12.19.0
+    pip install azure-identity==1.15.0
+    pip install pylogger2azblob
     ```
 
 1. Set an .env file with the following content:
@@ -48,21 +35,23 @@ This repository provides a Python logging handler, BlobStorageTimedRotatingFileH
     LOGGING_INTERVAL=1
     ```
 
-1. (optional) If you'd like to test it, Run the tests using the command:
-    ```bash
-    pytest
-    ```
-
 ## Tutorial
 
 To demonstrate how to use the logging functionality provided by PYLOGGER2AZBLOB, follow the steps below:
 
 1. Ensure you have completed the installation steps mentioned in the [Installation/Configuration](#Installation/Configuration) section of this README.
 
+1. To read the contents of dotenv when executing the code below, please install the following:
+    ```bash
+    pip install python-dotenv==1.0.0
+    ```
+
 1. Create a Python script, e.g., `tutorial.py`, and copy the following code:
     ```python
     import os
     import logging
+    import pylogger2azblob
+
     from logging.config import dictConfig
     from dotenv import load_dotenv
 
