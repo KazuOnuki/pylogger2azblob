@@ -34,7 +34,7 @@ jobs:
     runs-on: ubuntu-latest
 
     environment:
-      name: testpypiv2
+      name: dev
       url: https://test.pypi.org/p/pylogger2azblob
 
     permissions:
