@@ -35,7 +35,7 @@ jobs:
 
     environment:
       name: testpypi
-      url: https://test.pypi.org/p/pylogger2azblob
+      url: https://test.pypi.org/p/pylogger2azblob-v2
 
     permissions:
       id-token: write  # IMPORTANT: mandatory for trusted publishing
