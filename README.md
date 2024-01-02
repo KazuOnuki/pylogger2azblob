@@ -10,8 +10,8 @@ This repository provides a Python logging handler, BlobStorageTimedRotatingFileH
 
 1. Install the required packages using the command:
     ```bash
-    pip install azure-storage-blob==12.19.0
-    pip install azure-identity==1.15.0
+    pip install azure-storage-blob
+    pip install azure-identity
     pip install pylogger2azblob
     ```
 
@@ -44,7 +44,7 @@ To demonstrate how to use the logging functionality provided by PYLOGGER2AZBLOB,
 
 1. To read the contents of dotenv when executing the code below, please install the following:
     ```bash
-    pip install python-dotenv==1.0.0
+    pip install python-dotenv
     ```
 
 1. Create a Python script, e.g., `tutorial.py`, and copy the following code:
