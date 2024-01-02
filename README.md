@@ -12,7 +12,8 @@ This repository provides a Python logging handler, BlobStorageTimedRotatingFileH
     ```bash
     pip install azure-storage-blob
     pip install azure-identity
-    pip install pylogger2azblob
+    # this package is for dev stage.
+    pip install -i https://test.pypi.org/simple/ pylogger2azblob
     ```
 
 1. Set an .env file with the following content:
