@@ -10,5 +10,5 @@ Please note, the `PYLOGGER2AZBLOB` is now open source!
 The repo is available here: [PYLOGGER2AZBLOB - Github](https://github.com/KazuOnuki/pylogger2azblob).
 
 ## Changelog
-### 0.0.1 (2024-01-01)
+### 0.1.0 (2024-01-03)
 - first release
