@@ -1,6 +1,6 @@
 [project]
 name = "pylogger2azblob"
-version = "0.0.6"
+version = "0.0.1"
 authors = [{name="Kazuya Onuki"}]
 description = "a Python logging handler, BlobStorageTimedRotatingFileHandler, that extends the functionality of the built-in TimedRotatingFileHandler."
 readme = "README_pypi.md"
