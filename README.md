@@ -16,6 +16,7 @@ This repository provides a Python logging handler, BlobStorageTimedRotatingFileH
     ```
 
 1. Set an .env file with the following content:
+   > NOTE: User must assign  `Contiributor / Storage Blob Data Contributor` Role to `<your-storage-account-name>` resource scope. 
     ```dotenv
     #######################################
     # pytest settings
